@@ -1,4 +1,4 @@
-format_example
+format_addEquipment
 <- sc_node_not_relation;
 <- format;
 => nrel_main_idtf:
@@ -7,14 +7,14 @@ format_example
 	<- lang_ru;;
 	 *);
 => nrel_main_idtf:
-	[format of UI component]
+	[format of add equipment UI component]
 	(*
 	<- lang_en;;
 	*);
 => nrel_mimetype:
 	[application/html];;
 
-example_code <- ui_external_languages;
+addEquipment_code <- ui_external_languages;
 => nrel_main_idtf:
 	[Компонент добавления снаряжения]
 	(*

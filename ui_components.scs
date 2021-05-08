@@ -1,4 +1,4 @@
-ui_example_text_component <- sc_node_not_relation;
+ui_addEquipment_text_component <- sc_node_not_relation;
 => nrel_main_idtf:
 	[Компонента пользовательского интерфейса для добавления снаряжения.]
 	(*
@@ -10,7 +10,7 @@ ui_example_text_component <- sc_node_not_relation;
 	<- lang_en;;
 	*);;
 
-ui_example_answer_button <- sc_node_not_relation;
+ui_addEquipment_answer_button <- sc_node_not_relation;
 => nrel_main_idtf:
 	[Добавить]
 	(*
