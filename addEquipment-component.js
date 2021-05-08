@@ -74,17 +74,17 @@ addEquipmentWindow = function (sandbox) {
 
 	let radios1 = document.querySelectorAll('input[name="type"]');	
 	let radios2 = document.querySelectorAll('input[name="armor"]');	
-
+	
 	var text =  'concept_skyrim_'+ identificator.value + '\n\n';
-	text += '=> nrel_main_idtf: [' + engName.value + '] (* <- lang_en;; *)\n';
+	text += '=> nrel_main_idtf: [' + engName.value + '] (* <- lang_en;; *);\n';
 	text += '=> nrel_main_idtf: ['+ ruName.value + '] (* <- lang_ru;; *);\n\n'
-	text += '<= nrel_inclusion: concept_skyrim_';
+	text += '<- concept_skyrim_';
 	for (let radio of radios1) {
 		if (radio.checked) {
 			text+= radio.value + ';\n';
 		}
 	}
-	text += '<= nrel_inclusion: concept_skyrim_';
+	text += '<- concept_skyrim_';
 	for (let radio of radios2) {
 		if (radio.checked) {
 			text+= radio.value + ';\n';
@@ -102,7 +102,7 @@ addEquipmentWindow = function (sandbox) {
 	text += '	(*\n';
 	text += '		-> ['+ definition.value +'] (* <- lang_ru;; => nrel_format: format_html;; *);;\n';
 	text += '	*);;\n';
-	text += '*);;\n\n';
+	text += '*);\n\n';
 
 	text += '<- rrel_key_sc_element: ...\n';
 	text += '(*\n';
@@ -112,9 +112,9 @@ addEquipmentWindow = function (sandbox) {
 	text += '	(*\n';
 	text += '		-> ['+ description.value +'] (* <- lang_ru;; => nrel_format: format_html;; *);;\n';
 	text += '	*);;\n';
-	text += '*);;\n';
+	text += '*);\n';
 
-	text += '<- sc_node_not_relation';
+	text += '<- sc_node_not_relation;;';
 
 
 	var file = identificator.value + '.scs';
@@ -129,7 +129,7 @@ addEquipmentWindow = function (sandbox) {
             let keywordScAddr = keynodes[identifier];
 
             if (keywordScAddr){
-	   	alert("Понятие есть в базе знаний");
+	   	alert("Понятие с идентификатором "+ identifier + " уже есть в базе знаний");
                 return;
             }
 	    
